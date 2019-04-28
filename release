@@ -1,0 +1,18 @@
+#!/bin/bash
+
+BOT=$1
+
+source bot${BOT}
+if [ $? -ne 0 ]; then exit; fi
+
+rsync -av --exclude ".git" --exclude "*.[oa]" --exclude "balances" --exclude "buy" --exclude "buyers" --exclude "chart" --exclude "cryptobot" --exclude "currencies" --exclude "equalize" --exclude "lab" --exclude "monitor" --exclude "orders" --exclude "rates" --exclude "release" --exclude "sell" --exclude "sellers" --exclude "transfer" --exclude "unittests" --exclude "wallet" --exclude "cryptobot.xcodeproj" --exclude ".deps" --exclude "autom4te.cache" --exclude "handelaar.log" --exclude "satellite" --exclude "mintrade" --exclude "arbitrage" --exclude "patterns" --exclude "multipath" --exclude "books" --exclude "withdrawals" --exclude "expire" --exclude "learn" --exclude "report" --exclude "optimize" --exclude "surfer" --exclude "website" --exclude "comment" --exclude "pair" --exclude "keeper" --exclude "test.php" --exclude "eurbtc" --exclude "download" . $USER@${IP}:cryptobot
+if [ $? -ne 0 ]; then exit; fi
+ssh $USER@${IP} 'cd cryptobot; ./reconfigure'
+if [ $? -ne 0 ]; then exit; fi
+ssh $USER@${IP} 'cd cryptobot; ./configure'
+if [ $? -ne 0 ]; then exit; fi
+ssh $USER@${IP} "cd cryptobot; make --jobs=${JOBS}"
+if [ $? -ne 0 ]; then exit; fi
+ssh $USER@${IP} 'cd cryptobot; rm *.h; rm *.cpp; rm *.o; rm *.a; rm -rf .git; rm -rf .deps; rm *.c; rm *.txt; rm lab; rm depcomp; rm -f *.o-*; rm -rf autom4te.cache; rm login; rm missing; rm mysql; rm -f satellite1; rm -f satellite2; rm -f test.php rm -f unittests; rm help; rm buy; rm buyers; rm comment; rm compile; rm config.guess; rm pair; rm proxies.sh; rm proxy.sh; rm *.hpp; rm reconfigure; rm sell; rm sellers; rm transfer; rm wallet; rm withdrawals'
+if [ $? -ne 0 ]; then exit; fi
+

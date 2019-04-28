@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BOT=$1
+source bot${BOT}
+if [ $? -ne 0 ]; then exit; fi
+mysql --host=$IP --user=root --password=yourpasswordhere store

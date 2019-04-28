@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Correct working directory.
+CODESOURCE=`dirname $0`
+cd $CODESOURCE
+
+# Operate on the back bot.
+source botback
+
+echo "Adding all bots' logfiles"
+ssh $USER@$IP "cryptobot/keeper"
+
+# Rename the log files in an atomic operation.
+# This ensures no lost log messages.
+ssh $USER@$IP 'mv /tmp/handelaar.log /tmp/handelaar.log2'
+
+# Copy the log files from the back bot to the local folder.
+scp $USER@$IP:/tmp/*.log2 .
+
+# Remove the copied log files from the back bot.
+ssh $USER@$IP 'rm /tmp/*.log2'
+
+# Append them to the logs in the local folder.
+cat handelaar.log2 >> handelaar.log 2> /dev/null
+rm -f handelaar.log2
+
+echo Synchronizing the website from the back bot to macOS
+rsync --archive --delete $USER@$IP:cryptodata/website ../cryptodata
+
+# Open the website.
+open ../cryptodata/website/index.html
+
+# Open the logfile.
+open handelaar.log
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CODESOURCE=`dirname $0`
+cd $CODESOURCE
+
+source botback
+
+sudo sshfs -o allow_other,defer_permissions,IdentityFile=/Users/joe/.ssh/id_rsa $USER@$IP:/home/joe/cryptodata/databases ../cryptodata/databases
+
+# The above script mounts the SQLite databases at the backbot
+# to the same relative mountpoint, at macOS.
+# This way, development uses the existing SQLite databases,
+# without the need to keep them synchronized on macOS.
+
+# More information about how to use sshfs:
+# https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+

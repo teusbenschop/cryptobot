@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CODESOURCE=`dirname $0`
+cd $CODESOURCE
+
+source botfront
+
+# ssh $USER@$IP "netstat -antep | grep -q 3306"
+# EXIT_CODE=$?
+# if [ $EXIT_CODE == 0 ]; then
+# exit
+# fi
+
+# ssh -f -N -T -R 3306:localhost:3306 $USER@$IP

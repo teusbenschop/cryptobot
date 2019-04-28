@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		CA0E36C0213985210089198F /* eurbtc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = eurbtc.cpp; sourceTree = "<group>"; };
+		CA1903F621200F9B006C04A4 /* keeper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = keeper.cpp; sourceTree = "<group>"; };
+		CA1DD7A31F40B39900E9930B /* buyers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buyers.cpp; sourceTree = "<group>"; };
+		CA1DD7A41F40B39E00E9930B /* sellers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sellers.cpp; sourceTree = "<group>"; };
+		CA1DD7A51F40B82E00E9930B /* exchanges.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = exchanges.cpp; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CA1DD7A61F40B82E00E9930B /* exchanges.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = exchanges.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CA1DF0261F44BE1E00B53EF8 /* help */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = help; sourceTree = "<group>"; };
+		CA20A35020E68A7A00419DA6 /* traders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = traders.h; sourceTree = "<group>"; };
+		CA20A35120E68A7C00419DA6 /* traders.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = traders.cpp; sourceTree = "<group>"; };
+		CA20A35220E68F3A00419DA6 /* generators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = generators.h; sourceTree = "<group>"; };
+		CA20A35320E68F3B00419DA6 /* generators.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = generators.cpp; sourceTree = "<group>"; };
+		CA24FC641F407FFA00B2669C /* models.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = models.cpp; sourceTree = "<group>"; };
+		CA24FC651F407FFA00B2669C /* models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = models.h; sourceTree = "<group>"; };
+		CA2DB5311F2FBD1A003E36E0 /* locks.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = locks.c; sourceTree = "<group>"; };
+		CA2DB5321F2FBD1A003E36E0 /* locks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = locks.h; sourceTree = "<group>"; };
+		CA2DB5331F2FBE5F003E36E0 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		CA2FC03B201DD43200BBFE7A /* proxy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = proxy.sh; sourceTree = "<group>"; };
+		CA327E06202DF42500E05BBE /* firewall.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = firewall.sh; sourceTree = "<group>"; };
+		CA342BFA1F4F4A19004B9A80 /* transfer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = transfer.cpp; sourceTree = "<group>"; };
+		CA349A812117140900B474D7 /* comment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = comment.cpp; sourceTree = "<group>"; };
+		CA3B05111F3B6AED0038132E /* currencies.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = currencies.cpp; sourceTree = "<group>"; };
+		CA4A3BAD1F3F7B8E00027172 /* wallet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wallet.cpp; sourceTree = "<group>"; };
+		CA4EF3301F38E55A00C16BAB /* sql.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sql.cpp; sourceTree = "<group>"; };
+		CA4EF3311F38E55A00C16BAB /* sql.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sql.h; sourceTree = "<group>"; };
+		CA51436A1FC7574900D80BE8 /* yobit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = yobit.cpp; sourceTree = "<group>"; };
+		CA51436B1FC7574A00D80BE8 /* yobit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yobit.h; sourceTree = "<group>"; };
+		CA582B5B1FD336C900A542D5 /* report.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = report.cpp; sourceTree = "<group>"; };
+		CA5C825920ED4BB7009F0DF6 /* prospectives.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = prospectives.js; sourceTree = "<group>"; };
+		CA613355213DAD8900A0B3D3 /* download.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = download.cpp; sourceTree = "<group>"; };
+		CA6177FE1F3ED490004B021D /* logs */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = logs; sourceTree = "<group>"; };
+		CA6178011F3EE9D9004B021D /* balances.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = balances.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CA6C618320406CE70049E624 /* sqlite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqlite.h; sourceTree = "<group>"; };
+		CA6C618420406CE80049E624 /* sqlite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sqlite.cpp; sourceTree = "<group>"; };
+		CA6E0AAE2138347A007D86BE /* botproxy05 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = botproxy05; sourceTree = "<group>"; };
+		CA718D6320C421FB002A24C2 /* operations.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = operations.txt; sourceTree = "<group>"; };
+		CA739807206559F800AF8E9F /* cpu.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = cpu.sh; sourceTree = "<group>"; };
+		CA73980820655D7100AF8E9F /* releases.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = releases.sh; sourceTree = "<group>"; };
+		CA76DC2920DAB66600C7B512 /* surfer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = surfer.cpp; sourceTree = "<group>"; };
+		CA7B9EF71F30C8BE006CF784 /* bittrex.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = bittrex.cpp; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CA7B9EF81F30C8BE006CF784 /* bittrex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = bittrex.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CA7B9EF91F30CA0B006CF784 /* shared.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = shared.cpp; sourceTree = "<group>"; tabWidth = 2; };
+		CA7B9EFA1F30CA0B006CF784 /* shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shared.h; sourceTree = "<group>"; };
+		CA7B9EFB1F30CF63006CF784 /* libraries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libraries.h; sourceTree = "<group>"; };
+		CA7B9EFC1F310006006CF784 /* bl3p.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = bl3p.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CA7B9EFD1F310006006CF784 /* bl3p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = bl3p.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CA7B9EFE1F310591006CF784 /* cryptopia.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = cryptopia.cpp; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CA7B9EFF1F310591006CF784 /* cryptopia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = cryptopia.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CA7C17381F2FABBB00538383 /* configure.ac */ = {isa = PBXFileReference; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
+		CA7C17391F2FABC300538383 /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 0; path = Makefile.am; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		CA7FBD411F4DC1EA001D85D5 /* unittests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = unittests.cpp; sourceTree = "<group>"; };
+		CA848B12202CD4C2007C2D95 /* botfront */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = botfront; sourceTree = "<group>"; };
+		CA8984DF1F3CA49400F58E29 /* lab.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab.cpp; sourceTree = "<group>"; };
+		CA8B7A221FDB058A00FA6160 /* proxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = proxy.h; sourceTree = "<group>"; };
+		CA8B7A231FDB058A00FA6160 /* proxy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = proxy.cpp; sourceTree = "<group>"; };
+		CA967D931F3DF461001CFB05 /* mysql */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mysql; sourceTree = "<group>"; };
+		CAA4B2F51F69708400742BFC /* chart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chart.cpp; sourceTree = "<group>"; };
+		CAA6A71C1FAA3468007B6C4F /* tunnel */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = tunnel; sourceTree = "<group>"; };
+		CAA6A71D1FAA35F9007B6C4F /* vps.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = vps.txt; sourceTree = "<group>"; };
+		CAA6A71E1FAA4738007B6C4F /* release */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = release; sourceTree = "<group>"; };
+		CAA733C91F433F7E008D5560 /* controllers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = controllers.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CAA733CA1F433F7E008D5560 /* controllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = controllers.h; sourceTree = "<group>"; };
+		CAA733CB1F4344C5008D5560 /* buy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buy.cpp; sourceTree = "<group>"; };
+		CAA733CC1F43490B008D5560 /* orders.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = orders.cpp; sourceTree = "<group>"; };
+		CAA733CD1F43795C008D5560 /* sell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sell.cpp; sourceTree = "<group>"; };
+		CAACAF8520766FE30064BF93 /* 3306 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = 3306; sourceTree = "<group>"; };
+		CAACAF86207681FD0064BF93 /* login */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = login; sourceTree = "<group>"; };
+		CAB0696A2056E03D00F20515 /* multipath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = multipath.cpp; sourceTree = "<group>"; };
+		CAB1929020320D45000B8832 /* arbitrage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = arbitrage.cpp; sourceTree = "<group>"; };
+		CAB4605F1FC9F2A200AA45BC /* kraken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kraken.h; sourceTree = "<group>"; };
+		CAB460601FC9F2A300AA45BC /* kraken.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kraken.cpp; sourceTree = "<group>"; };
+		CAB460611FCAF22B00AA45BC /* poloniex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = poloniex.cpp; sourceTree = "<group>"; };
+		CAB460621FCAF22B00AA45BC /* poloniex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = poloniex.h; sourceTree = "<group>"; };
+		CAB6C89220DFBAAB000BD8F7 /* website.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = website.cpp; sourceTree = "<group>"; };
+		CABB0DB91F7177CA0080EB03 /* bitfinex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bitfinex.cpp; sourceTree = "<group>"; };
+		CABB0DBA1F7177CA0080EB03 /* bitfinex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bitfinex.h; sourceTree = "<group>"; };
+		CABFBB8220BF29D0003B68D8 /* optimize.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = optimize.cpp; sourceTree = "<group>"; };
+		CAC118771FFE018F000F507F /* test.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = test.php; sourceTree = "<group>"; };
+		CAC9691720B1DD3B008D341C /* botback */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = botback; sourceTree = "<group>"; };
+		CACB3A1F202A1605008ACF2C /* satellite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = satellite.cpp; sourceTree = "<group>"; };
+		CACFF4A71F4764D800D8A902 /* rates.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rates.cpp; sourceTree = "<group>"; };
+		CAD09193211A07F400EA1D05 /* pair.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pair.cpp; sourceTree = "<group>"; };
+		CAD7521220BDCB1300F176E3 /* mountdatabases */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = mountdatabases; sourceTree = "<group>"; };
+		CADC11021FE9A22A0003878E /* withdrawals.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = withdrawals.cpp; sourceTree = "<group>"; };
+		CADC11031FE9A23E0003878E /* deposits.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = deposits.cpp; sourceTree = "<group>"; };
+		CAE23DF620DFBF530049C365 /* html.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = html.h; sourceTree = "<group>"; };
+		CAE23DF720DFBF540049C365 /* html.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = html.cpp; sourceTree = "<group>"; };
+		CAE334D120C9AB63008A985E /* simulators.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simulators.cpp; sourceTree = "<group>"; };
+		CAE334D220C9AB63008A985E /* simulators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simulators.h; sourceTree = "<group>"; };
+		CAE515551F2E48E000DC2A97 /* cryptobot.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = cryptobot.cpp; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		CAE515571F2E48EA00DC2A97 /* jsonxx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = jsonxx.cpp; sourceTree = "<group>"; };
+		CAE515581F2E48EA00DC2A97 /* jsonxx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jsonxx.h; sourceTree = "<group>"; };
+		CAE98A6E202650F20042EB1E /* io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		CAE98A6F202650F20042EB1E /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		CAEAB9CC20A0CB9800C3CFB6 /* learn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = learn.cpp; sourceTree = "<group>"; };
+		CAF6323021370339008520F4 /* botproxy01 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = botproxy01; sourceTree = "<group>"; };
+		CAF63231213706DF008520F4 /* botproxy02 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = botproxy02; sourceTree = "<group>"; };
+		CAF63232213706DF008520F4 /* botproxy03 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = botproxy03; sourceTree = "<group>"; };
+		CAF63233213706E0008520F4 /* botproxy04 */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = botproxy04; sourceTree = "<group>"; };
+		CAF6971F202F7D080027A81D /* patterns.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = patterns.cpp; sourceTree = "<group>"; };
+		CAF69720202F86E80027A81D /* expire.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = expire.cpp; sourceTree = "<group>"; };
+		CAF6972220303DB50027A81D /* mintrade.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mintrade.cpp; sourceTree = "<group>"; };
+		CAF697232030CA240027A81D /* proxies.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = proxies.sh; sourceTree = "<group>"; };
+		CAFB670E2024C45E0084AAD8 /* tradesatoshi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tradesatoshi.cpp; sourceTree = "<group>"; };
+		CAFB670F2024C45E0084AAD8 /* tradesatoshi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tradesatoshi.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		CAC5F8361F2E48C000302F62 = {
+			isa = PBXGroup;
+			children = (
+				CAACAF8520766FE30064BF93 /* 3306 */,
+				CAB1929020320D45000B8832 /* arbitrage.cpp */,
+				CA6178011F3EE9D9004B021D /* balances.cpp */,
+				CABB0DB91F7177CA0080EB03 /* bitfinex.cpp */,
+				CABB0DBA1F7177CA0080EB03 /* bitfinex.h */,
+				CA7B9EF71F30C8BE006CF784 /* bittrex.cpp */,
+				CA7B9EF81F30C8BE006CF784 /* bittrex.h */,
+				CA7B9EFC1F310006006CF784 /* bl3p.cpp */,
+				CA7B9EFD1F310006006CF784 /* bl3p.h */,
+				CAC9691720B1DD3B008D341C /* botback */,
+				CA848B12202CD4C2007C2D95 /* botfront */,
+				CAF6323021370339008520F4 /* botproxy01 */,
+				CAF63231213706DF008520F4 /* botproxy02 */,
+				CAF63232213706DF008520F4 /* botproxy03 */,
+				CAF63233213706E0008520F4 /* botproxy04 */,
+				CA6E0AAE2138347A007D86BE /* botproxy05 */,
+				CAA733CB1F4344C5008D5560 /* buy.cpp */,
+				CA1DD7A31F40B39900E9930B /* buyers.cpp */,
+				CAA4B2F51F69708400742BFC /* chart.cpp */,
+				CA349A812117140900B474D7 /* comment.cpp */,
+				CA2DB5331F2FBE5F003E36E0 /* config.h */,
+				CA7C17381F2FABBB00538383 /* configure.ac */,
+				CAA733C91F433F7E008D5560 /* controllers.cpp */,
+				CAA733CA1F433F7E008D5560 /* controllers.h */,
+				CA739807206559F800AF8E9F /* cpu.sh */,
+				CAE515551F2E48E000DC2A97 /* cryptobot.cpp */,
+				CA7B9EFE1F310591006CF784 /* cryptopia.cpp */,
+				CA7B9EFF1F310591006CF784 /* cryptopia.h */,
+				CA3B05111F3B6AED0038132E /* currencies.cpp */,
+				CADC11031FE9A23E0003878E /* deposits.cpp */,
+				CA613355213DAD8900A0B3D3 /* download.cpp */,
+				CA0E36C0213985210089198F /* eurbtc.cpp */,
+				CA1DD7A51F40B82E00E9930B /* exchanges.cpp */,
+				CA1DD7A61F40B82E00E9930B /* exchanges.h */,
+				CAF69720202F86E80027A81D /* expire.cpp */,
+				CA327E06202DF42500E05BBE /* firewall.sh */,
+				CA20A35320E68F3B00419DA6 /* generators.cpp */,
+				CA20A35220E68F3A00419DA6 /* generators.h */,
+				CA1DF0261F44BE1E00B53EF8 /* help */,
+				CAE23DF720DFBF540049C365 /* html.cpp */,
+				CAE23DF620DFBF530049C365 /* html.h */,
+				CAE98A6E202650F20042EB1E /* io.c */,
+				CAE98A6F202650F20042EB1E /* io.h */,
+				CAE515571F2E48EA00DC2A97 /* jsonxx.cpp */,
+				CAE515581F2E48EA00DC2A97 /* jsonxx.h */,
+				CA1903F621200F9B006C04A4 /* keeper.cpp */,
+				CAB460601FC9F2A300AA45BC /* kraken.cpp */,
+				CAB4605F1FC9F2A200AA45BC /* kraken.h */,
+				CA8984DF1F3CA49400F58E29 /* lab.cpp */,
+				CAEAB9CC20A0CB9800C3CFB6 /* learn.cpp */,
+				CA7B9EFB1F30CF63006CF784 /* libraries.h */,
+				CA2DB5311F2FBD1A003E36E0 /* locks.c */,
+				CA2DB5321F2FBD1A003E36E0 /* locks.h */,
+				CAACAF86207681FD0064BF93 /* login */,
+				CA6177FE1F3ED490004B021D /* logs */,
+				CA7C17391F2FABC300538383 /* Makefile.am */,
+				CAF6972220303DB50027A81D /* mintrade.cpp */,
+				CA24FC641F407FFA00B2669C /* models.cpp */,
+				CA24FC651F407FFA00B2669C /* models.h */,
+				CAD7521220BDCB1300F176E3 /* mountdatabases */,
+				CAB0696A2056E03D00F20515 /* multipath.cpp */,
+				CA967D931F3DF461001CFB05 /* mysql */,
+				CA718D6320C421FB002A24C2 /* operations.txt */,
+				CABFBB8220BF29D0003B68D8 /* optimize.cpp */,
+				CAA733CC1F43490B008D5560 /* orders.cpp */,
+				CAD09193211A07F400EA1D05 /* pair.cpp */,
+				CAF6971F202F7D080027A81D /* patterns.cpp */,
+				CAB460611FCAF22B00AA45BC /* poloniex.cpp */,
+				CAB460621FCAF22B00AA45BC /* poloniex.h */,
+				CA5C825920ED4BB7009F0DF6 /* prospectives.js */,
+				CAF697232030CA240027A81D /* proxies.sh */,
+				CA8B7A231FDB058A00FA6160 /* proxy.cpp */,
+				CA8B7A221FDB058A00FA6160 /* proxy.h */,
+				CA2FC03B201DD43200BBFE7A /* proxy.sh */,
+				CACFF4A71F4764D800D8A902 /* rates.cpp */,
+				CAA6A71E1FAA4738007B6C4F /* release */,
+				CA73980820655D7100AF8E9F /* releases.sh */,
+				CA582B5B1FD336C900A542D5 /* report.cpp */,
+				CACB3A1F202A1605008ACF2C /* satellite.cpp */,
+				CAA733CD1F43795C008D5560 /* sell.cpp */,
+				CA1DD7A41F40B39E00E9930B /* sellers.cpp */,
+				CA7B9EF91F30CA0B006CF784 /* shared.cpp */,
+				CA7B9EFA1F30CA0B006CF784 /* shared.h */,
+				CAE334D120C9AB63008A985E /* simulators.cpp */,
+				CAE334D220C9AB63008A985E /* simulators.h */,
+				CA4EF3301F38E55A00C16BAB /* sql.cpp */,
+				CA4EF3311F38E55A00C16BAB /* sql.h */,
+				CA6C618420406CE80049E624 /* sqlite.cpp */,
+				CA6C618320406CE70049E624 /* sqlite.h */,
+				CA76DC2920DAB66600C7B512 /* surfer.cpp */,
+				CAC118771FFE018F000F507F /* test.php */,
+				CA20A35120E68A7C00419DA6 /* traders.cpp */,
+				CA20A35020E68A7A00419DA6 /* traders.h */,
+				CAFB670E2024C45E0084AAD8 /* tradesatoshi.cpp */,
+				CAFB670F2024C45E0084AAD8 /* tradesatoshi.h */,
+				CA342BFA1F4F4A19004B9A80 /* transfer.cpp */,
+				CAA6A71C1FAA3468007B6C4F /* tunnel */,
+				CA7FBD411F4DC1EA001D85D5 /* unittests.cpp */,
+				CAA6A71D1FAA35F9007B6C4F /* vps.txt */,
+				CA4A3BAD1F3F7B8E00027172 /* wallet.cpp */,
+				CAB6C89220DFBAAB000BD8F7 /* website.cpp */,
+				CADC11021FE9A22A0003878E /* withdrawals.cpp */,
+				CA51436A1FC7574900D80BE8 /* yobit.cpp */,
+				CA51436B1FC7574A00D80BE8 /* yobit.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		CAC5F83B1F2E48C000302F62 /* cryptobot */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)  --jobs=2";
+			buildConfigurationList = CAC5F83E1F2E48C000302F62 /* Build configuration list for PBXLegacyTarget "cryptobot" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = cryptobot;
+			passBuildSettingsInEnvironment = 1;
+			productName = cryptobot;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		CAC5F8371F2E48C000302F62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Teus Benschop";
+				TargetAttributes = {
+					CAC5F83B1F2E48C000302F62 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = L37WFUB5MH;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CAC5F83A1F2E48C000302F62 /* Build configuration list for PBXProject "cryptobot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAC5F8361F2E48C000302F62;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAC5F83B1F2E48C000302F62 /* cryptobot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		CAC5F83C1F2E48C000302F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		CAC5F83D1F2E48C000302F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		CAC5F83F1F2E48C000302F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = L37WFUB5MH;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CAC5F8401F2E48C000302F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = L37WFUB5MH;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAC5F83A1F2E48C000302F62 /* Build configuration list for PBXProject "cryptobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC5F83C1F2E48C000302F62 /* Debug */,
+				CAC5F83D1F2E48C000302F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAC5F83E1F2E48C000302F62 /* Build configuration list for PBXLegacyTarget "cryptobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAC5F83F1F2E48C000302F62 /* Debug */,
+				CAC5F8401F2E48C000302F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAC5F8371F2E48C000302F62 /* Project object */;
+}

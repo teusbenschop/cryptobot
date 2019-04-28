@@ -1,0 +1,20 @@
+Notes about "balancing" or "redistribution" of coins over the exchanges.
+
+There have been times that due to the withdrawal fees, balancing the coins over the exchanges, cost more than the trading gained. This led to a negative gain, or in plain words, to the bot running at a loss. When balancing was stopped then, the gains started to be positive again. So it may be more profitable to do arbitrage trading without balancing the coins.
+Another advantage of not balancing the coins is that all issues about failed withdrawals, or non-arrived deposits, no longer are relevant.
+There have been cases that the system balanced too much and it spun out of control. It balanced from exchange A to exchange B, then next time from B back to A, and so on. This way there were high withdrawal costs, and little gain, actually, there was a loss.
+
+
+Notes about arbitrage.
+* It is very important that the limit trade order are placed while the order book is still recent. This implies that calls to the exchange's API's should return quickly. A time-out is built in now so an exchange that does not respond in time, drops out.
+* It is better for long-time arbitrage to only trade a coin between two exchanges, not more than that. This has been learnt after trading coins on three and more exchanges, when it ran at a loss, and it went back to gaining again afer trading at a pair of two exchanges.
+* The orders of some coins last for 8 days, then the bot will cancel them. Such coins are not good candidates for arbitrage trading, because cancelling this order could lead to loss, although it does not necessarily lead to this loss.
+
+
+How to convert Bitcoins to Euros.
+* Through BL3P.
+* Through LiteBit.
+
+
+
+

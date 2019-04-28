@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo ./balances
+echo ./buy
+echo ./buyers
+echo ./chart
+echo ./currencies
+echo ./deposits
+echo ./orders
+echo ./rates
+echo ./report
+echo ./sell
+echo ./sellers
+echo ./transfer
+echo ./triplets
+echo ./wallet
+echo ./withdrawals

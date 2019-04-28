@@ -1,0 +1,147 @@
+How to install a server for a bot and a satellite.
+
+
+Create a new instance with DigitalOcean or PCExtreme.
+
+
+It is very critical for the timing of the arbitrage trade
+that the actual trading bot has a fast connection to the internet.
+This way there is no delays in trading.
+The trading part was once moved to a bot at home.
+But this led to losses in arbitrage trading.
+After the trading bot was moved back to a VPS with PCExtreme,
+the arbitrage trading started to make gains again.
+It has been found too that on a VPS,
+if other users delay the host machine,
+there's cases that the cryptobot delays completing.
+That is a good reason for having a dedicated server running the bot.
+Reporting and deep learning and analysis can run on other bots.
+These are not very critical as to timing.
+
+
+If it is Ubuntu server not running as root:
+$ sudo visudo
+Add this:
+joe ALL=(ALL) NOPASSWD: ALL
+
+
+Use the public SSH key for password-less login.
+
+
+In file /etc/ssh/sshd_config, check this:
+PermitEmptyPasswords no
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+Note that some elements may be repeated the last one taking effect.
+$ service ssh restart
+
+
+$ apt install fail2ban
+
+
+Setup sending mail through the VPS.
+$ apt install exim4
+
+$ dpkg-reconfigure exim4-config
+Mail server configuration: mail sent by smarthost; received via SMTP or fetchmail
+System mail name: <hostname>
+IP-addresses to listen on for incoming SMTP connections: 127.0.0.1 ; ::1
+Other destinations for which mail is accepted:: <hostname>
+Machines to relay mail for: <empty>
+IP address or host name of the outgoing smarthost:
+ smtp.gmail.com::587
+ mail.kpnmail.nl::587
+Hide local mail name in outgoing mail?: No
+Keep number of DNS-queries minimal (Dial-on-Demand)?: No
+Delivery method for local mail: mbox format in /var/mail/
+Split configuration into small files?: No
+Root and postmaster mail recipient: joe@gmail.com
+
+Use Google app password:
+https://www.talk-about-it.ca/setting-up-exim4-with-gmail-and-2-factor-authentication/
+See also https://forum.kpn.com/e-mail-10/e-mail-versturen-smtp-server-instellen-360421
+
+$ nano /etc/exim4/passwd.client
+*.google.com:mail@gmail.com:password
+*.kpnmail.nl:joe@kpnmail.nl:password
+
+For KPN, edit file /etc/email-addresses so it contains the following lines:
+joe: joe@website.nl
+root: root@website.nl
+
+It the developer's email was not set, update /etc/aliases and run newaliases
+
+$ service exim4 restart
+
+Test it:
+$ echo test | mail -s test root
+
+Force frozen messages:
+$ exim4 -qff
+
+
+Install MySQL server on Linux:
+$ apt install mysql-server
+Enter password: yourpasswordhere
+If it does not ask for a password, reset the password:
+https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux
+
+
+Optimize the InnoDB buffer pool size:
+https://dba.stackexchange.com/questions/39467/mysql-performance-impact-of-increasing-innodb-buffer-pool-size
+Currently do this:
+$ nano /etc/mysql/my.cnf
+[mysqld]
+innodb_buffer_pool_size=1000M
+
+$ systemctl restart mysql.service
+
+
+The following is to be done on the bot's VPS to make the MySQL server accessible
+to the developer's machine, and to the front bot and to the back bot.
+* Run the following SQL:
+  GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'yourpasswordhere';
+  FLUSH PRIVILEGES;
+* Comment out the below line in file /etc/mysql/mysql.conf.d/mysqld.cnf :
+  bind-address = 127.0.0.1
+* $ service mysql reload
+* $ service mysql restart
+
+
+On the satellite there's insufficient memory to build the satellite.
+So add swap memory, as follows:
+dd if=/dev/zero of=swap.img bs=1M count=1024
+mkswap swap.img
+chmod 0600 swap.img
+swapon swap.img
+Add the following to the crontab as root:
+@reboot /sbin/swapon /root/swap.img
+
+$ apt install autotools-dev autoconf autoconf-archive build-essential pkg-config libmysqlclient-dev libcurl4-openssl-dev libssl-dev libsqlite3-dev gnuplot mpack sysstat sqlite3 libgsl-dev mysql-client sshfs
+
+Build the bot.
+
+Disable crontab on the old VPS.
+$ crontab -e
+
+Dump the database on the old VPS:
+$ mysqldump --user=root --password=yourpasswordhere --databases store > sql.sql
+Copy the dump from the old to the new VPS.
+Create the new database 'store':
+CREATE DATABASE store;
+Import the dump into the database on the new VPS:
+$ mysql --user=root --password=yourpasswordhere store < sql.sql
+
+
+
+Test some of the bot's commands to be sure everything works well.
+
+Enable crontab on the new VPS:
+$ crontab -e
+
+The contents of the crontab of the bots is backed up daily.
+
+Update the workstation's backup script to point to new VPS.
+
+Destroy the old VPS.
+
